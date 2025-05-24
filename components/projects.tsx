@@ -1,38 +1,45 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
-import { ExternalLink, Github, Brain, GraduationCap } from "lucide-react"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { ExternalLink, Github, Brain, GraduationCap } from "lucide-react";
 
 const projects = [
   {
     title: "CodeScrutiny",
     subtitle: "AI-Powered Code Review Agent",
     description:
-      "Built a RAG-driven microservice in NestJS that integrates GPT-4o-mini with Pinecone for contextual code review suggestions. Features GraphQL API for client-side integrations and incremental feedback storage for personalized review sessions.",
-    technologies: ["NestJS", "GPT-4o-mini", "Pinecone", "GraphQL", "TypeScript"],
+      "Built a RAG-driven microservice in NestJS that integrates GPT-4o-mini with Pinecone for contextual code review suggestions. Features REST API for client-side integrations and incremental feedback storage for personalized review sessions.",
+    technologies: [
+      "NestJS",
+      "GPT-4o-mini",
+      "Pinecone",
+      "REST API",
+      "TypeScript",
+      "Python",
+    ],
     icon: Brain,
     color: "from-purple-400 to-pink-600",
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Vix1209/ai-code-review-agent-BE",
+    // demo: "https://ai-code-review-agent.vercel.app/",
   },
   {
     title: "Edulite LMS",
     subtitle: "Learning Management System (Hackathon Winner)",
     description:
-      "Contributed as Backend Developer to an open-source LMS addressing SDG-4: Quality Education for All. Designed and implemented APIs using NestJS and TypeScript. Won 3rd place in national hackathon with a team of 4 developers.",
-    technologies: ["NestJS", "TypeScript", "React.js", "Ant Design", "PostgreSQL"],
+      "Contributed as Backend Developer to an open-source LMS addressing SDG-4: Quality Education for All. Designed and implemented APIs using NestJS and TypeScript. Won 3rd place in national hackathon with a team of 4.",
+    technologies: ["NestJS", "TypeScript", "Python", "FastAPI", "PostgreSQL"],
     icon: GraduationCap,
     color: "from-green-400 to-blue-600",
-    github: "#",
-    demo: "#",
+    github: "https://github.com/Vix1209/Talenvo_X_Cleva-hackathon",
+    // demo: "#",
   },
-]
+];
 
 export default function Projects() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="projects" className="py-20 relative" ref={ref}>
@@ -47,7 +54,8 @@ export default function Projects() {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Innovative solutions that showcase my expertise in AI integration and scalable architecture
+            Innovative solutions that showcase my expertise in AI integration
+            and scalable architecture
           </p>
         </motion.div>
 
@@ -71,9 +79,15 @@ export default function Projects() {
                 </motion.div>
 
                 {/* Project Info */}
-                <h3 className="text-2xl font-bold text-white mb-2">{project.title}</h3>
-                <h4 className="text-lg text-green-400 font-semibold mb-4">{project.subtitle}</h4>
-                <p className="text-gray-300 mb-6 leading-relaxed">{project.description}</p>
+                <h3 className="text-2xl font-bold text-white mb-2">
+                  {project.title}
+                </h3>
+                <h4 className="text-lg text-green-400 font-semibold mb-4">
+                  {project.subtitle}
+                </h4>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {project.description}
+                </p>
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -105,7 +119,7 @@ export default function Projects() {
                     <Github size={16} className="mr-2" />
                     Code
                   </motion.a>
-                  <motion.a
+                  {/* <motion.a
                     href={project.demo}
                     className="flex items-center px-4 py-2 bg-gradient-to-r from-green-500 to-blue-500 text-white rounded-lg hover:shadow-lg hover:shadow-green-500/25 transition-all"
                     whileHover={{ scale: 1.05 }}
@@ -113,7 +127,7 @@ export default function Projects() {
                   >
                     <ExternalLink size={16} className="mr-2" />
                     Demo
-                  </motion.a>
+                  </motion.a> */}
                 </div>
               </div>
             </motion.div>
@@ -121,5 +135,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }
