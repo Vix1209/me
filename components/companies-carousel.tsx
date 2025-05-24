@@ -3,33 +3,51 @@
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Image from "next/image";
+// import Link from "next/link";
 
 const companies = [
   {
-    name: "Aquatrack Agtech Connect",
-    logo: "/placeholder.svg?height=60&width=180",
+    name: "Aquatrack",
+    logo: "/logos/aquatrack.png",
     website: "https://www.aquatrackinc.com",
     description: "AgTech Management System, Marketplace & Community",
   },
   {
     name: "Envoyangel Logistics",
-    logo: "/placeholder.svg?height=60&width=180",
+    logo: "/logos/envoy.png",
     website: "https://www.envoyangel.com",
     description: "International Logistics Platform",
   },
   {
     name: "TruBooker",
-    logo: "/placeholder.svg?height=60&width=180",
+    logo: "/logos/trubooker.svg",
     website: "https://www.trubooker.com",
     description: "Trip Booking App",
   },
   {
     name: "Yoga Experience Africa",
-    logo: "/placeholder.svg?height=60&width=180",
+    logo: "/logos/yea-logo.png",
     website: "https://www.yogaexperiences.africa",
     description: "Yoga community and wellness application",
   },
 ];
+
+// <Link className="z-10" href="/">
+//   <div className="flex items-center h-8">
+//     <div className="mr-2">
+//       <Image
+//         src="/logos/telefy.svg"
+//         alt="Telefy Tech Logo"
+//         className="h-8 text-primary-600 dark:text-primary-400"
+//       />
+//     </div>
+//     <div className="font-display font-bold text-gray-800 dark:text-white">
+//       <span className="text-primary-600 dark:text-primary-400">Telefy</span>
+//       Tech
+//     </div>
+//   </div>
+// </Link>;
 
 export default function CompaniesCarousel() {
   const scrollRef: any = useRef(null);
@@ -157,9 +175,15 @@ export default function CompaniesCarousel() {
                     {/* Company Logo */}
                     <div className="flex items-center justify-center mb-4 h-16">
                       <div className="relative w-full h-full flex items-center justify-center">
-                        <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
+                        <div className="w-32 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
                           <span className="text-white font-bold text-xl">
-                            {company.name.charAt(0)}
+                            <Image
+                              src={company.logo}
+                              alt={company.name}
+                              width={80}
+                              height={80}
+                              priority
+                            />
                           </span>
                         </div>
                       </div>
@@ -193,7 +217,7 @@ export default function CompaniesCarousel() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
                 onClick={scrollLeft}
-                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-full p-3 text-white hover:bg-gray-800 hover:border-green-500/50 active:scale-95 transition-all duration-300 shadow-lg shadow-black/20"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm border border-gray-700 rounded-full p-3 text-gray-900/90 hover:bg-gray-300 hover:border-green-500/50 active:scale-95 transition-all duration-300 shadow-lg shadow-black/20"
                 aria-label="Scroll left"
               >
                 <ChevronLeft size={20} />
@@ -206,7 +230,7 @@ export default function CompaniesCarousel() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0 }}
                 onClick={scrollRight}
-                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-900/90 backdrop-blur-sm border border-gray-700 rounded-full p-3 text-white hover:bg-gray-800 hover:border-green-500/50 active:scale-95 transition-all duration-300 shadow-lg shadow-black/20"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 backdrop-blur-sm border border-gray-700 rounded-full p-3 text-gray-900/90 hover:bg-gray-300 hover:border-green-500/50 active:scale-95 transition-all duration-300 shadow-lg shadow-black/20"
                 aria-label="Scroll right"
               >
                 <ChevronRight size={20} />
@@ -232,9 +256,15 @@ export default function CompaniesCarousel() {
                   {/* Company Logo */}
                   <div className="flex items-center justify-center mb-4 h-16">
                     <div className="relative w-full h-full flex items-center justify-center">
-                      <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
+                      <div className="w-32 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
                         <span className="text-white font-bold text-xl">
-                          {company.name.charAt(0)}
+                          <Image
+                            src={company.logo}
+                            alt={company.name}
+                            width={80}
+                            height={80}
+                            priority
+                          />
                         </span>
                       </div>
                     </div>
