@@ -13,9 +13,13 @@ export default function Hero() {
   useEffect(() => {
     const titles = [
       "Software Engineer",
-      "Microservice Architect",
+      "Backend Engineer",
+      "Microservices Architect",
       "AI Integration Specialist",
+      "Cloud Infrastructure Engineer",
+      "Platform Engineer",
     ];
+
     const currentFullText = titles[currentTitle];
     const typingSpeed = isDeleting ? 50 : 100;
     const pauseTime = isDeleting ? 500 : 2000;
@@ -153,10 +157,9 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 4.8 }}
             >
-              Crafting scalable, high-performance backend systems with Node.js,
-              TypeScript, and cutting-edge microservices architecture.
-              Passionate about sustainable technology, automated systems and lightning-fast user
-              experiences.
+              A versatile software engineer with strong focus on Backend
+              Development and Systems Architecture. Passionate about sustainable
+              technology, automated systems and lightning-fast user experiences.
             </motion.p>
 
             <motion.div
@@ -192,9 +195,7 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1, delay: 4.5 }}
           >
-            <motion.div
-              className="relative"
-            >
+            <motion.div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 relative">
                 <Image
                   src="/images/my-avatar-2.png"

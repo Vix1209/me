@@ -6,25 +6,25 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Uchenna Ofor - Software Engineer",
+  title: "Uchenna Ofor - Backend Engineer || Full-Stack Developer",
   icons: "/images/vixnewcircle.png",
   description:
-    "Experienced Software Engineer specializing in React, Node.js, TypeScript, microservices architecture, and AI integrations. Building scalable, sustainable technology solutions.",
+    "Uchenna Ofor is a backend-focused engineer with full-stack capabilities. Specializing in scalable backend systems using TypeScript, NestJS, and microservices architecture, with experience integrating React-based frontends for seamless user experiences. Passionate about AI, automation, and system performance.",
   keywords:
-    "Software Engineer, Software Developer, Backend Developer, Backend Engineer, Node.js, TypeScript, Microservices, AI Integration, NestJS, GraphQL, REST API, Docker, AWS",
+    "Backend Engineer, Full-Stack Developer, Microservices, TypeScript, NestJS, Node.js, Golang, Python, AI Integration, Automation, React, REST API, GraphQL, Docker, AWS, Systems Architecture",
   authors: [{ name: "Uchenna Ofor" }],
   openGraph: {
-    title: "Uchenna Ofor - Software Engineer",
+    title: "Uchenna Ofor - Backend Engineer || Full-Stack Developer",
     description:
-      "Experienced Software Engineer specializing in React, Node.js, TypeScript, microservices architecture, and AI integrations.",
+      "Building scalable backend infrastructure with TypeScript, NestJS, and AI-driven systems. Full-stack capable with experience in React and frontend integration.",
     type: "website",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Uchenna Ofor - Software Engineer",
+    title: "Uchenna Ofor - Backend Engineer || Full-Stack Developer",
     description:
-      "Building scalable, sustainable technology solutions with Typescript and NestJS. Passionate about automated systems and lightning-fast user experiences.",
+      "Engineer focused on backend systems, automation, and AI integration. Skilled in TypeScript, NestJS, and React for full-stack performance and scalability.",
   },
   robots: {
     index: true,

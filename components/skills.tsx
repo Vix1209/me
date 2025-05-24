@@ -1,13 +1,21 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useInView } from "framer-motion"
-import { useRef } from "react"
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
 
 const skills = [
   {
     category: "Languages & Frameworks",
-    items: ["Node.js", "NestJS", "Express", "TypeScript", "JavaScript"],
+    items: [
+      "Node.js",
+      "NestJS",
+      "React",
+      "Nextjs",
+      "Express",
+      "TypeScript",
+      "JavaScript",
+    ],
     color: "from-green-400 to-emerald-600",
   },
   {
@@ -32,14 +40,14 @@ const skills = [
   },
   {
     category: "Cloud & DevOps",
-    items: ["AWS Lambda", "AWS ECS", "CI/CD", "Docker", "Terraform"],
+    items: ["AWS EC2", "AWS ECS", "CI/CD", "Docker", "CloudFront"],
     color: "from-indigo-400 to-blue-600",
   },
-]
+];
 
 export default function Skills() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="skills" className="py-20 relative" ref={ref}>
@@ -54,7 +62,8 @@ export default function Skills() {
             Technical Arsenal
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Cutting-edge technologies and frameworks I use to build scalable, high-performance systems
+            Cutting-edge technologies and frameworks I use to build scalable,
+            high-performance systems
           </p>
         </motion.div>
 
@@ -73,10 +82,14 @@ export default function Skills() {
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <span className="text-white font-bold text-xl">{skill.category.charAt(0)}</span>
+                  <span className="text-white font-bold text-xl">
+                    {skill.category.charAt(0)}
+                  </span>
                 </motion.div>
 
-                <h3 className="text-xl font-semibold text-white mb-4">{skill.category}</h3>
+                <h3 className="text-xl font-semibold text-white mb-4">
+                  {skill.category}
+                </h3>
 
                 <div className="flex flex-wrap gap-2">
                   {skill.items.map((item, itemIndex) => (
@@ -101,5 +114,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }
