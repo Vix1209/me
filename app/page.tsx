@@ -10,6 +10,7 @@ import Sustainability from "@/components/sustainability"
 import Contact from "@/components/contact"
 import Navigation from "@/components/navigation"
 import FloatingElements from "@/components/floating-elements"
+import CompaniesCarousel from "@/components/companies-carousel"
 
 export default function Portfolio() {
   const [isLoading, setIsLoading] = useState(true)
@@ -31,6 +32,7 @@ export default function Portfolio() {
       <FloatingElements />
       <Navigation />
       <Hero />
+      <CompaniesCarousel />
       <Skills />
       <Experience />
       <Projects />
