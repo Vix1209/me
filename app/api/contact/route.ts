@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
 
     // Email content
     const mailOptions = {
-      from: process.env.EMAIL_USER,
+      from: `Vix Portfolio <${process.env.EMAIL_USER}>`,
       to: "ucheofor2015@gmail.com", // Your email address
       subject: `Portfolio Contact: ${subject}`,
       text: `
