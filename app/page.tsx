@@ -18,7 +18,7 @@ export default function Portfolio() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false)
-    }, 3500)
+    }, 5000)
 
     return () => clearTimeout(timer)
   }, [])

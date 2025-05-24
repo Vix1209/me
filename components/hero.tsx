@@ -53,7 +53,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
       {/* Floating Tech Icons */}
-      <motion.div
+      {/* <motion.div
         className="absolute top-20 left-20 text-green-400"
         animate={{
           y: [0, -20, 0],
@@ -98,7 +98,7 @@ export default function Hero() {
         }}
       >
         <Zap size={30} />
-      </motion.div>
+      </motion.div> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -198,7 +198,7 @@ export default function Hero() {
             <motion.div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 relative">
                 <Image
-                  src="/images/my-avatar-2.png"
+                  src="/images/my-avatar.png"
                   alt="Uchenna Ofor - Backend Engineer"
                   fill
                   className="object-contain"

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+// import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 // import Link from "next/link";
 
@@ -166,10 +166,10 @@ export default function CompaniesCarousel() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-shrink-0 group cursor-pointer"
-                  initial={{ opacity: 0, x: 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+                  // initial={{ opacity: 0, x: 50 }}
+                  // whileInView={{ opacity: 1, x: 0 }}
+                  // transition={{ duration: 0.5, delay: index * 0.1 }}
+                  // viewport={{ once: true }}
                 >
                   <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-green-500/50 active:border-green-500/70 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-green-500/10 w-[280px] h-[240px] flex flex-col justify-center">
                     {/* Company Logo */}
@@ -211,7 +211,7 @@ export default function CompaniesCarousel() {
             </div>
 
             {/* Navigation Arrows for Mobile */}
-            {showLeftArrow && (
+            {/* {showLeftArrow && (
               <motion.button
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -235,7 +235,7 @@ export default function CompaniesCarousel() {
               >
                 <ChevronRight size={20} />
               </motion.button>
-            )}
+            )} */}
           </div>
 
           {/* Desktop/Tablet: Grid Layout */}
