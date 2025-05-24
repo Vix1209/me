@@ -198,7 +198,7 @@ export default function Hero() {
             <motion.div className="relative">
               <div className="w-80 h-80 md:w-96 md:h-96 relative">
                 <Image
-                  src="/images/my-avatar.png"
+                  src="/images/my-avatar-2.png"
                   alt="Uchenna Ofor - Backend Engineer"
                   fill
                   className="object-contain"
