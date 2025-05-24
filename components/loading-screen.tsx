@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function LoadingScreen() {
@@ -64,13 +65,20 @@ export default function LoadingScreen() {
               }}
             />
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-2xl font-bold text-green-400">U</span>
+              {/* <span className="text-2xl font-bold text-green-400">U</span> */}
+              <Image
+                src="/images/vixnewcircle.png"
+                width={80}
+                height={80}
+                alt=""
+                priority
+              />
             </div>
           </div>
         </motion.div>
 
         {/* Loading Text */}
-        <motion.h1
+        {/* <motion.h1
           className="text-4xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -86,7 +94,7 @@ export default function LoadingScreen() {
           transition={{ delay: 1, duration: 0.8 }}
         >
           Backend Engineer • Microservices Architect
-        </motion.p>
+        </motion.p> */}
 
         {/* Progress Bar */}
         <div className="w-64 h-2 bg-gray-800 rounded-full mx-auto mb-4">

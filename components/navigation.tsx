@@ -1,20 +1,21 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { useState, useEffect } from "react"
-import { Menu, X, Github, Linkedin, Mail } from "lucide-react"
+import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { Menu, X, Github, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 
 export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -23,7 +24,7 @@ export default function Navigation() {
     { name: "Projects", href: "#projects" },
     { name: "Sustainability", href: "#sustainability" },
     { name: "Contact", href: "#contact" },
-  ]
+  ];
 
   return (
     <motion.nav
@@ -41,7 +42,13 @@ export default function Navigation() {
             className="text-2xl font-bold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
-            UCHENNA
+            <Image
+              src="/images/vixnewcircle.png"
+              width={50}
+              height={50}
+              alt=""
+              priority
+            />
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -50,7 +57,7 @@ export default function Navigation() {
               <motion.a
                 key={item.name}
                 href={item.href}
-                className="text-gray-300 hover:text-green-400 transition-colors duration-300"
+                className="text-gray-300 text-sm hover:text-green-400 transition-colors duration-300"
                 whileHover={{ y: -2 }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -100,7 +107,11 @@ export default function Navigation() {
           </div>
 
           {/* Mobile Menu Button */}
-          <motion.button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)} whileTap={{ scale: 0.95 }}>
+          <motion.button
+            className="md:hidden text-white"
+            onClick={() => setIsOpen(!isOpen)}
+            whileTap={{ scale: 0.95 }}
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </motion.button>
         </div>
@@ -127,5 +138,5 @@ export default function Navigation() {
         )}
       </div>
     </motion.nav>
-  )
+  );
 }
