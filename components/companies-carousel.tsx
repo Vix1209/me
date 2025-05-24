@@ -25,7 +25,7 @@ const companies = [
     name: "Yoga Experience Africa",
     logo: "/placeholder.svg?height=60&width=180",
     website: "https://www.yogaexperiences.africa",
-    description: "Trip Booking App",
+    description: "Yoga community and wellness application",
   },
 ];
 
