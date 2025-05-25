@@ -102,7 +102,7 @@ export default function CompaniesCarousel() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext className="lg:block hidden text-black ps-2" />
+            <CarouselNext className=" text-black ps-2" />
           </Carousel>
         </div>
 

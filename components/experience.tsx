@@ -85,7 +85,7 @@ export default function Experience() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          // transition={{ duration: 0.8 }}
         >
           <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
             Professional Journey
@@ -107,13 +107,13 @@ export default function Experience() {
                 className="relative flex flex-col md:flex-row items-start"
                 initial={{ opacity: 0, x: -50 }}
                 animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.8, delay: index * 0.3 }}
+                // transition={{ duration: 0.8, delay: index * 0.3 }}
               >
                 {/* Timeline Dot */}
                 <motion.div
                   className={`hidden md:flex w-16 h-16 rounded-full bg-gradient-to-r ${exp.color} items-center justify-center relative z-10 flex-shrink-0`}
                   whileHover={{ scale: 1.1 }}
-                  transition={{ duration: 0.3 }}
+                  // transition={{ duration: 0.3 }}
                 >
                   {exp.type === "work" ? (
                     <TrendingUp className="text-white" size={24} />
@@ -156,10 +156,10 @@ export default function Experience() {
                           className="flex items-start text-gray-300"
                           initial={{ opacity: 0, x: -20 }}
                           animate={isInView ? { opacity: 1, x: 0 } : {}}
-                          transition={{
-                            duration: 0.5,
-                            delay: index * 0.3 + achIndex * 0.1,
-                          }}
+                          // transition={{
+                          //   duration: 0.5,
+                          //   delay: index * 0.3 + achIndex * 0.1,
+                          // }}
                         >
                           <span className="w-2 h-2 bg-green-400 rounded-full mt-2 mr-3 flex-shrink-0" />
                           {achievement}
