@@ -27,9 +27,9 @@ const CarouselLayout: FC<Company> = ({
             href={website}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex-shrink-0 group cursor-pointer"
+            className="flex-shrink-0 group cursor-pointer w-full"
           >
-            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-green-500/50 active:border-green-500/70 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-green-500/10 w-[280px] h-[240px] flex flex-col justify-center">
+            <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 hover:border-green-500/50 active:border-green-500/70 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-green-500/10 w-full h-[240px] flex flex-col justify-center">
               <div className="flex items-center justify-center mb-4 h-16">
                 <div className="relative w-full h-full flex items-center justify-center">
                   <div className="w-32 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center">

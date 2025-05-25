@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useRef } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
+  CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
@@ -57,6 +58,32 @@ const companies = [
 
 export default function CompaniesCarousel() {
   const plugin = useRef(Autoplay({ delay: 6000, stopOnInteraction: false }));
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!api) return;
+    setCurrent(api.selectedScrollSnap());
+  }, [api]);
+
+  React.useEffect(() => {
+    if (!api) return;
+
+    onSelect();
+    api.on("select", onSelect);
+
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api, onSelect]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      if (!api) return;
+      api.scrollTo(index);
+    },
+    [api]
+  );
 
   return (
     <section className="py-16 relative overflow-hidden">
@@ -82,6 +109,7 @@ export default function CompaniesCarousel() {
           <Carousel
             className="w-full mx-auto text-center ps-4 pb-8"
             plugins={[plugin.current]}
+            setApi={setApi}
           >
             <CarouselPrevious className="lg:block hidden text-black ps-2" />
             <CarouselContent className="-ms-1 w-full text-start">
@@ -102,8 +130,24 @@ export default function CompaniesCarousel() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselNext className=" text-black ps-2" />
+            <CarouselNext className="lg:block hidden text-black ps-2" />
           </Carousel>
+
+          {/* Mobile Pagination Dots */}
+          <div className="sm:hidden flex justify-center items-center mt-6 space-x-2">
+            {companies.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  current === index
+                    ? "bg-green-400 w-6"
+                    : "bg-gray-600 hover:bg-gray-500"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* Stats Section */}
