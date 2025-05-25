@@ -43,7 +43,7 @@ export default function Navigation() {
             whileHover={{ scale: 1.05 }}
           >
             <Image
-              src="/images/vixnewcircle.png"
+              src="/images/vixnewcircleInvert.png"
               width={50}
               height={50}
               alt=""
