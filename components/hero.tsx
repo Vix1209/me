@@ -47,7 +47,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="mt-24 sm:mt-0 min-h-screen flex items-center justify-center relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
       {/* Background Grid */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(34,197,94,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(34,197,94,0.1)_1px,transparent_1px)] bg-[size:50px_50px]" />
