@@ -50,12 +50,12 @@ export default function Sustainability() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          // transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8 }}
         >
           <motion.div
             className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 mb-6"
             whileHover={{ rotate: 360 }}
-            // transition={{ duration: 0.8 }}
+            transition={{ duration: 0.8 }}
           >
             <Leaf className="text-white" size={40} />
           </motion.div>
@@ -79,7 +79,7 @@ export default function Sustainability() {
               className="text-center group"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              // transition={{ duration: 0.8, delay: index * 0.1 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
             >
               <motion.div
                 className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-green-500/25 transition-all duration-300"
@@ -102,13 +102,13 @@ export default function Sustainability() {
           className="bg-gradient-to-r from-green-900/30 to-emerald-900/30 backdrop-blur-sm border border-green-500/30 rounded-2xl p-8 text-center"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          // transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
         >
           <motion.h3
             className="text-3xl font-bold text-white mb-4"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            // transition={{ duration: 0.8, delay: 0.7 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
           >
             Building for Tomorrow
           </motion.h3>
@@ -116,7 +116,7 @@ export default function Sustainability() {
             className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            // transition={{ duration: 0.8, delay: 0.9 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
           >
             My work on projects like Edulite LMS directly addresses UN SDG-4
             (Quality Education for All), while my focus on efficient

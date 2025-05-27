@@ -135,7 +135,7 @@ export default function Contact() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          // transition={{ duration: 0.8 }}
+          transition={{ duration: 0.8 }}
         >
           <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
             Let&apos;s Build Something Amazing
@@ -152,7 +152,7 @@ export default function Contact() {
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            // transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div>
               <h3 className="text-3xl font-bold text-white mb-6">
@@ -181,13 +181,13 @@ export default function Contact() {
                   className="flex items-center p-4 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl hover:border-green-500/50 transition-all duration-300 group"
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  // transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
+                  transition={{ duration: 0.6, delay: 0.4 + index * 0.1 }}
                   whileHover={{ scale: 1.02, x: 5 }}
                 >
                   <motion.div
                     className={`w-12 h-12 rounded-lg bg-gradient-to-r ${contact.color} flex items-center justify-center mr-4`}
                     whileHover={{ rotate: 360 }}
-                    // transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.6 }}
                   >
                     <contact.icon className="text-white" size={20} />
                   </motion.div>
@@ -207,7 +207,7 @@ export default function Contact() {
             className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8"
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            // transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h3 className="text-2xl font-bold text-white mb-6">
               Send a Message
@@ -218,7 +218,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  // transition={{ duration: 0.6, delay: 0.6 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
                 >
                   <label className="block text-gray-400 text-sm mb-2">
                     Name
@@ -237,7 +237,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
-                  // transition={{ duration: 0.6, delay: 0.7 }}
+                  transition={{ duration: 0.6, delay: 0.7 }}
                 >
                   <label className="block text-gray-400 text-sm mb-2">
                     Email
@@ -257,7 +257,7 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                // transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
               >
                 <label className="block text-gray-400 text-sm mb-2">
                   Subject
@@ -276,7 +276,7 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                // transition={{ duration: 0.6, delay: 0.9 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
               >
                 <label className="block text-gray-400 text-sm mb-2">
                   Message
@@ -302,7 +302,7 @@ export default function Contact() {
                   } flex items-center`}
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  // transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.3 }}
                 >
                   {submitStatus.success ? (
                     <CheckCircle size={20} className="text-green-500 mr-2" />
@@ -327,7 +327,7 @@ export default function Contact() {
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                // transition={{ duration: 0.6, delay: 1 }}
+                transition={{ duration: 0.6, delay: 1 }}
                 whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                 whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
               >
@@ -352,7 +352,7 @@ export default function Contact() {
           className="text-center mt-16 pt-8 border-t border-gray-800"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          // transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
         >
           <p className="text-gray-400">
             © 2025 Uchenna Ofor. Built with passion for sustainable technology.
