@@ -79,7 +79,7 @@ export default function Sustainability() {
               className="text-center group"
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.8, delay: index * 0.1 }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               <motion.div
                 className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-400 to-emerald-600 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-green-500/25 transition-all duration-300"
@@ -116,7 +116,7 @@ export default function Sustainability() {
             className="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.9 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
           >
             My work on projects like Edulite LMS directly addresses UN SDG-4
             (Quality Education for All), while my focus on efficient

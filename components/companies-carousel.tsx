@@ -57,7 +57,7 @@ const companies = [
 ];
 
 export default function CompaniesCarousel() {
-  const plugin = useRef(Autoplay({ delay: 6000, stopOnInteraction: false }));
+  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 

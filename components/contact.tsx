@@ -135,7 +135,7 @@ export default function Contact() {
           className="text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.3 }}
         >
           <h2 className="text-5xl font-bold mb-4 bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent">
             Let&apos;s Build Something Amazing
@@ -152,7 +152,7 @@ export default function Contact() {
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.3, delay: 0.2 }}
           >
             <div>
               <h3 className="text-3xl font-bold text-white mb-6">
@@ -207,7 +207,7 @@ export default function Contact() {
             className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-8"
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.3, delay: 0.4 }}
           >
             <h3 className="text-2xl font-bold text-white mb-6">
               Send a Message
@@ -257,7 +257,7 @@ export default function Contact() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <label className="block text-gray-400 text-sm mb-2">
                   Subject
@@ -352,7 +352,7 @@ export default function Contact() {
           className="text-center mt-16 pt-8 border-t border-gray-800"
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.3, delay: 1.2 }}
         >
           <p className="text-gray-400">
             © 2025 Uchenna Ofor. Built with passion for sustainable technology.

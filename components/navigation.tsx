@@ -33,7 +33,7 @@ export default function Navigation() {
       }`}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.8, delay: 3.5 }}
+      transition={{ duration: 0.3 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
@@ -61,7 +61,6 @@ export default function Navigation() {
                 whileHover={{ y: -2 }}
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 3.7 + index * 0.1 }}
               >
                 {item.name}
               </motion.a>
@@ -90,7 +89,7 @@ export default function Navigation() {
               whileHover={{ scale: 1.2, rotate: -5 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 4.1 }}
+              transition={{ delay: 0.1 }}
             >
               <Linkedin size={20} />
             </motion.a>
@@ -100,7 +99,7 @@ export default function Navigation() {
               whileHover={{ scale: 1.2, rotate: 5 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ delay: 4.2 }}
+              transition={{ delay: 0.2 }}
             >
               <Mail size={20} />
             </motion.a>
