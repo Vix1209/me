@@ -192,12 +192,13 @@ export default function Hero() {
             transition={{ duration: 0.3 }}
           >
             <motion.div className="relative">
-              <div className="w-80 h-80 md:w-96 md:h-96 relative">
+              <div className="w-80 h-80 md:w-72 md:h-96 p-5 rounded-2xl relative group">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-black/20 to-black/30 z-10"></div>
                 <Image
-                  src="/images/my-avatar.png"
+                  src="/images/me.jpeg"
                   alt="Uchenna Ofor - Backend Engineer"
                   fill
-                  className="object-contain"
+                  className="object-cover rounded-2xl shadow-lg shadow-green-500/20 backdrop-blur-lg bg-white/10"
                   priority
                 />
               </div>
