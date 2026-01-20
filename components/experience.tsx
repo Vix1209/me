@@ -8,6 +8,36 @@ import { Calendar, MapPin, TrendingUp, BookOpen } from "lucide-react";
 const experiences = [
   {
     title: "Software Engineer (Backend)",
+    company: "Quivy",
+    period: "July 2025 - December 2025",
+    location: "Remote",
+    achievements: [
+      "Built a horizontally scalable, Dockerized backend in NestJS with clear service separation for an Event Management API, Gift Card API and worker layer using Redis and BullMQ to process high-volume background jobs.",
+      "Designed data ingestion pipelines with caching (300s TTL) to reduce repeat reads and improve dashboard performance.",
+      "Implemented atomic, race-condition-safe workflows using Redis primitives to enforce business invariants under concurrent load.",
+      "Delivered idempotent task processing with automatic retries and real-time status updates via WebSockets.",
+      "Integrated multiple third-party OAuth verification systems, handling unreliable external responses through retries and bulk job processing",
+    ],
+    color: "from-orange-400 to-red-600",
+    type: "work",
+  },
+  {
+    title: "Software Engineer (Backend)",
+    company: "TelefyTech",
+    period: "May 2025 - Oct 2025",
+    location: "Remote",
+    achievements: [
+      "Architected a unified payments and data ingestion platform in NestJS/TypeScript with PostgreSQL/Drizzle, RabbitMQ, and Socket.IO for websockets.",
+      "Integrated 5+ payment providers (Stripe, Paystack, Flutterwave, Binance Pay, NowPayments) through a single webhook/status mapping layer.",
+      "Designed a resilient webhook pipeline with idempotency, signature verification, RabbitMQ retries/DLQ — achieving 99.8% webhook reliability and sub-2s payment confirmations.",
+      "Secured the platform with dual authentication (JWT + API keys), RBAC guards, Redis rate limiting, and refresh-token rotation.",
+      "Implemented audit-grade status history with full attribution and chronological tracking.",
+    ],
+    color: "from-blue-400 to-cyan-600",
+    type: "work",
+  },
+  {
+    title: "Software Engineer (Backend)",
     company: "Eden Cloudwave Technology",
     period: "June 2024 - April 2025",
     location: "Remote",

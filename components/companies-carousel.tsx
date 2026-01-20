@@ -1,35 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useRef, useState, useCallback } from "react";
-import Autoplay from "embla-carousel-autoplay";
-import {
-  Carousel,
-  CarouselApi,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import CarouselLayout from "./CarouselLayout";
+import React from "react";
+import FloatingAnnouncement from "./Stats";
 
-// <Link className="z-10" href="/">
-//   <div className="flex items-center h-8">
-//     <div className="mr-2">
-//       <Image
-//         src="/logos/telefy.svg"
-//         alt="Telefy Tech Logo"
-//         className="h-8 text-primary-600 dark:text-primary-400"
-//       />
-//     </div>
-//     <div className="font-display font-bold text-gray-800 dark:text-white">
-//       <span className="text-primary-600 dark:text-primary-400">Telefy</span>
-//       Tech
-//     </div>
-//   </div>
-// </Link>;
-
-const companies = [
+const originalCompanies = [
   {
     name: "Aquatrack",
     logo: "/logos/aquatrack.png",
@@ -56,35 +31,10 @@ const companies = [
   },
 ];
 
+// const companies = [...originalCompanies, ...originalCompanies];
+const companies = originalCompanies;
+
 export default function CompaniesCarousel() {
-  const plugin = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-
-  const onSelect = useCallback(() => {
-    if (!api) return;
-    setCurrent(api.selectedScrollSnap());
-  }, [api]);
-
-  React.useEffect(() => {
-    if (!api) return;
-
-    onSelect();
-    api.on("select", onSelect);
-
-    return () => {
-      api.off("select", onSelect);
-    };
-  }, [api, onSelect]);
-
-  const scrollTo = useCallback(
-    (index: number) => {
-      if (!api) return;
-      api.scrollTo(index);
-    },
-    [api]
-  );
-
   return (
     <section className="py-16 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -105,50 +55,7 @@ export default function CompaniesCarousel() {
         </motion.div>
 
         {/* Companies Container */}
-        <div className="pt-4 lg:pt-10">
-          <Carousel
-            className="w-full mx-auto text-center ps-4 pb-8"
-            plugins={[plugin.current]}
-            setApi={setApi}
-          >
-            <CarouselPrevious className="lg:block hidden text-black ps-2" />
-            <CarouselContent className="-ms-1 w-full text-start">
-              {companies.map((company, index: number) => (
-                <CarouselItem
-                  key={index}
-                  className="w-full h-auto pl-1 basis-full sm:basis-1/2 xl:basis-1/3"
-                >
-                  <div className="w-full h-full">
-                    <CarouselLayout
-                      name={company.name}
-                      logo={company.logo}
-                      website={company.website}
-                      description={company.description}
-                      index={index}
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselNext className="lg:block hidden text-black ps-2" />
-          </Carousel>
-
-          {/* Mobile Pagination Dots */}
-          <div className="sm:hidden flex justify-center items-center mt-6 space-x-2">
-            {companies.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => scrollTo(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  current === index
-                    ? "bg-green-400 w-6"
-                    : "bg-gray-600 hover:bg-gray-500"
-                }`}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
+        <FloatingAnnouncement companies={companies} />
 
         {/* Stats Section */}
         <motion.div
