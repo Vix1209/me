@@ -37,6 +37,21 @@ const experiences = [
     type: "work",
   },
   {
+    title: "Software Engineer (Frontend)",
+    company: "Eachblock Software Agency",
+    period: "Sept 2024 - April 2025",
+    location: "Remote",
+    achievements: [
+      "Engineered and delivered multiple production-grade web solutions, including admin dashboards, e-commerce platforms, and payment interfaces, using Next.js, TypeScript, TailwindCSS, and Redux Toolkit.",
+      "Built custom, reusable UI components and design systems, reducing development time by 40% across multiple client projects.",
+      "Integrated Next.js serverless APIs for secure cookie-based token storage, cutting potential cyber vulnerabilities by over 80%.",
+      "Refactored and migrated a legacy logistics platform from Create React App (JavaScript) to Next.js (TypeScript), improving security, maintainability, and load performance by 60% while resolving long-standing memory leaks and redundant browser contexts.",
+      "Collaborated closely with backend teams to refine API contracts, enhance data integrity, and maintain consistent TypeScript typings across the codebase.",
+    ],
+    color: "from-purple-400 to-pink-600",
+    type: "work",
+  },
+  {
     title: "Software Engineer (Backend)",
     company: "Eden Cloudwave Technology",
     period: "June 2024 - April 2025",
