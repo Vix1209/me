@@ -35,6 +35,12 @@ const originalCompanies = [
     website: "https://telefytech.com/",
     description: "Telecommunications and IT Solutions",
   },
+  {
+    name: "Quivy",
+    logo: "/logos/quivy.png",
+    website: "https://quivy.io/",
+    description: "Giveaways event management platform",
+  },
 ];
 
 // const companies = [...originalCompanies, ...originalCompanies];
