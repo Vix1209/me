@@ -5,7 +5,7 @@ import CarouselLayout from "../CarouselLayout";
 const FloatingAnnouncement = ({ companies }: any) => {
   return (
     <div className="text-black py-8">
-      <Marquee gradient={false} speed={40} pauseOnHover>
+      <Marquee gradient={false} speed={100} pauseOnHover>
         {companies.map((company: any, index: number) => (
           <CarouselLayout
             key={index}

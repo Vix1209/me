@@ -29,6 +29,12 @@ const originalCompanies = [
     website: "https://www.yogaexperiences.africa",
     description: "Yoga community and wellness application",
   },
+  {
+    name: "TelefyTech",
+    logo: "/logos/telefy.png",
+    website: "https://telefytech.com/",
+    description: "Telecommunications and IT Solutions",
+  },
 ];
 
 // const companies = [...originalCompanies, ...originalCompanies];

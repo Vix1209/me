@@ -12,11 +12,9 @@ export default function Hero() {
 
   useEffect(() => {
     const titles = [
-      "Software Engineer",
       "Backend Engineer",
-      "Microservices Architect",
-      "AI Integration Specialist",
-      "Cloud Infrastructure Engineer",
+      "Software Developer",
+      "Systems Architect",
       "Platform Engineer",
     ];
 
@@ -195,7 +193,7 @@ export default function Hero() {
               <div className="w-80 h-80 md:w-72 md:h-96 p-5 rounded-2xl relative group">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-black/20 to-black/30 z-10"></div>
                 <Image
-                  src="/images/me.jpeg"
+                  src="/images/my-avatar-2.png"
                   alt="Uchenna Ofor - Backend Engineer"
                   fill
                   className="object-cover rounded-2xl shadow-lg shadow-green-500/20 backdrop-blur-lg bg-white/10"
