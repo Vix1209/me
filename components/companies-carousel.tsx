@@ -85,7 +85,7 @@ export default function CompaniesCarousel() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              3+
+              4+
             </motion.div>
             <p className="text-gray-400">Years Experience</p>
           </div>
