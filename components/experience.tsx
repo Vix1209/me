@@ -5,17 +5,45 @@ import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, MapPin, TrendingUp, BookOpen } from "lucide-react";
 
-const experiences = [
+interface Experience {
+  title: string;
+  company: string;
+  period: string;
+  location: string;
+  overview?: string;
+  achievements: string[];
+  color: string;
+  type: string;
+}
+
+const experiences: Experience[] = [
+  {
+    title: "Software Engineer (Backend)",
+    company: "Carlofty",
+    period: "January 2026 - Present",
+    location: "Remote (USA)",
+    overview:
+      "Carlofty is a B2B platform that lets Nigerian car dealers source, pay for, and import vehicles from US auctions — handling the currency conversion, compliance, and logistics in between.",
+    achievements: [
+      "Engineering the core payment pipeline handling NGN-to-USD conversion, deposit processing, and auction house settlement — the financial backbone behind every vehicle purchase on the platform; implementing funding enforcement logic that protects Carlofty from dealer default exposure on won bids.",
+      "Delivering end-to-end flows that grants dealers bidding credentials on US auction platforms, including payment-gated activation and automated platform login provisioning; directly enabling revenue-generating dealer activity on the platform.",
+      "Architecting the shipment tracking layer that connects vehicle wins to delivery milestones, laying the foundation for real-time visibility into the physical custody chain from US auction lot to Nigerian dealer.",
+    ],
+    color: "from-purple-400 to-pink-600",
+    type: "work",
+  },
   {
     title: "Software Engineer (Backend)",
     company: "Quivy",
     period: "July 2025 - December 2025",
-    location: "Remote",
+    location: "Remote (Nigeria)",
+    overview:
+      "Quivy is a gifting and rewards platform that lets event hosts run giveaways and send gift cards, while giving merchants a branded gift card commerce system with branch-level redemption.",
     achievements: [
-      "Built a horizontally scalable, Dockerized backend in NestJS with clear service separation for an Event Management API, Gift Card API and worker layer using Redis and BullMQ to process high-volume background jobs.",
-      "Designed data ingestion pipelines with caching (300s TTL) to reduce repeat reads and improve dashboard performance.",
-      "Implemented atomic, race-condition-safe workflows using Redis primitives to enforce business invariants under concurrent load.",
-      "Delivered idempotent task processing with automatic retries and real-time status updates via WebSockets.",
+      "Designed and built a dockerized dual-service NestJS monorepo behind a reverse proxy layer handling TLS termination, rate limiting, and request routing — a giveaway service for event hosting/wallet management and a giftcard service for merchant commerce — each independently deployable and connected via gRPC, targeting African event hosts, merchants, and branch-level POS staff as distinct personas with distinct data ownership boundaries.",
+      "Engineered a fault-tolerant inter-service communication layer using gRPC wrapped inside Bull job queues, so all cross-service calls are automatically queued and retried on failure — decoupling service uptime from cross-service consistency and protecting financial workflows from transient network failures.",
+      "Built a multi-account fintech payment pipeline, HMAC-verified webhook ingestion, and a DB-first soft escrow model with full auditability, eliminating multiple API calls and making the platform's available-balance calculation authoritative at the application layer.",
+      "Implemented atomic escrow workflows across distributed services: escrow creation, redemption settlement, and rollback paths — designed to be idempotent and race-condition-safe for concurrent giveaway claim submissions.",
       "Integrated multiple third-party OAuth verification systems, handling unreliable external responses through retries and bulk job processing",
     ],
     color: "from-orange-400 to-red-600",
@@ -23,12 +51,14 @@ const experiences = [
   },
   {
     title: "Software Engineer (Backend)",
-    company: "TelefyTech",
+    company: "Coincircuit",
     period: "May 2025 - Oct 2025",
-    location: "Remote",
+    location: "Remote (UK)",
+    overview:
+      "CoinCircuit specializes in giving businesses the infrastructure to accept crypto/fiat payments, send payouts, and automate payment workflows globally.",
     achievements: [
       "Architected a unified payments and data ingestion platform in NestJS/TypeScript with PostgreSQL/Drizzle, RabbitMQ, and Socket.IO for websockets.",
-      "Integrated 5+ payment providers (Stripe, Paystack, Flutterwave, Binance Pay, NowPayments) through a single webhook/status mapping layer.",
+      "Integrated 5+ payment providers through a single webhook/status mapping layer.",
       "Designed a resilient webhook pipeline with idempotency, signature verification, RabbitMQ retries/DLQ — achieving 99.8% webhook reliability and sub-2s payment confirmations.",
       "Secured the platform with dual authentication (JWT + API keys), RBAC guards, Redis rate limiting, and refresh-token rotation.",
       "Implemented audit-grade status history with full attribution and chronological tracking.",
@@ -40,7 +70,9 @@ const experiences = [
     title: "Software Engineer (Frontend)",
     company: "Eachblock Software Agency",
     period: "Sept 2024 - April 2025",
-    location: "Remote",
+    location: "Remote (Nigeria)",
+    overview:
+      "Eachblock Software Agency is a tech consultancy specializing in custom software solutions for e-commerce, fintech, and logistics. We focus on delivering high-quality, scalable, and secure applications that meet the unique needs of our clients.",
     achievements: [
       "Engineered and delivered multiple production-grade web solutions, including admin dashboards, e-commerce platforms, and payment interfaces, using Next.js, TypeScript, TailwindCSS, and Redux Toolkit.",
       "Built custom, reusable UI components and design systems, reducing development time by 40% across multiple client projects.",
@@ -54,8 +86,10 @@ const experiences = [
   {
     title: "Software Engineer (Backend)",
     company: "Eden Cloudwave Technology",
-    period: "June 2024 - April 2025",
-    location: "Remote",
+    period: "Sept 2024 - April 2025",
+    location: "Remote (Nigeria)",
+    overview:
+      "Eden Cloudwave Technology provides AI-powered cloud solutions, digital innovation, and sustainable technology services designed to simplify everyday living and enhance operational efficiency.",
     achievements: [
       "Architected AI-powered financial management system enabling partnerships with major financial institutions",
       "Built Kafka-based microservice reducing reconciliation errors by 50% and increasing throughput by 35%",
@@ -69,7 +103,9 @@ const experiences = [
     title: "Software Engineer (Backend)",
     company: "Aquatrack Agtech Connect",
     period: "January 2024 - September 2024",
-    location: "Remote",
+    location: "Remote (Nigeria)",
+    overview:
+      "AquaTrack is an all-in-one digital platform that empowers African fish farmers by providing AI-backed farm management tools, a marketplace to sell produce directly to consumers, and access to financial inclusion services.",
     achievements: [
       "Developed RESTful APIs and microservices for agtech marketplace serving 100+ daily active users",
       "Implemented JWT authentication and RBAC ensuring regulatory compliance",
@@ -182,6 +218,7 @@ export default function Experience() {
                           {exp.company}
                         </h4>
                       </div>
+
                       <div className="flex flex-col sm:items-end mt-2 sm:mt-0">
                         <div className="flex items-center text-gray-400 mb-1">
                           <Calendar size={16} className="mr-2" />
@@ -192,6 +229,12 @@ export default function Experience() {
                           {exp.location}
                         </div>
                       </div>
+                    </div>
+
+                    <div className="mb-4 ">
+                      {exp.overview && (
+                        <p className="text-gray-500 mt-2">{exp.overview}</p>
+                      )}
                     </div>
 
                     <ul className="space-y-3">

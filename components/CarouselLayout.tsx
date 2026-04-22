@@ -29,7 +29,7 @@ const CarouselLayout: FC<Company> = ({
           <div className="relative w-full h-full flex items-center justify-center">
             <div className="w-32 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">
-                <Image src={logo} alt={name} width={70} height={70} priority />
+                <Image src={logo} alt={name} width={60} height={60} priority />
               </span>
             </div>
           </div>

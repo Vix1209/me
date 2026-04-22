@@ -30,9 +30,9 @@ const originalCompanies = [
     description: "Yoga community and wellness application",
   },
   {
-    name: "TelefyTech",
-    logo: "/logos/telefy.png",
-    website: "https://telefytech.com/",
+    name: "Coincircuit",
+    logo: "/logos/coincircuit.png",
+    website: "https://coincircuit.io/",
     description: "Telecommunications and IT Solutions",
   },
   {
